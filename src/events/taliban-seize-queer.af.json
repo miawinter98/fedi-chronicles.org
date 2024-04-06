@@ -1,0 +1,6 @@
+{
+  "type": "news",
+  "date": "2024-02-12",
+  "title": "queer.af seized by Taliban",
+  "description": "The Mastodon instance queer.af disappeared after the Taliban have shut down the Domain. Alongside it other .af domains were affected. The Administrators already set out to not renew the Domain on April that year but were taken by surprise. Many fedi instances added a manual DNS entry to their instances' servers to allow users to migrate their accounts."
+}

@@ -1,0 +1,32 @@
+@import '@fontsource/noto-sans';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --color-primary: 117 0 240;
+        --color-primary-dark: 73 0 149;
+        --color-secondary: 101 52 155;
+        --color-secondary-dark: 70 33 110;
+        --color-accent: 45 15 71;
+    }
+}
+
+.hyphens-auto {
+    hyphenate-limit-chars: 5 3;
+}
+    
+.bg-primary-gradient {
+    @apply bg-gradient-to-r from-primary to-primary-dark text-white;
+}
+.bg-secondary-gradient {
+    @apply bg-gradient-to-r from-secondary to-secondary-dark text-white;
+}
+.box-shadow {
+    @apply drop-shadow-[4px_4px_0_#00000080];
+}
+.button-shadow {
+    @apply drop-shadow-[2px_2px_0_#000000BF];
+}

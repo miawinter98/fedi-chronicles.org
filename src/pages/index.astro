@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Panel from '../components/Panel.astro'
+import ChronologyItem from "../components/ChronologyItem.astro";
+
+const events = await Astro.glob("../events/*.json");
+---
+
+<Layout title="Fedi Chronicles">
+	<header>
+		<h1 class="text-3xl mb-12 text-center">Welcome to Fedi Chronicles!</h1>
+		<div class="flex justify-center mb-24">
+			<p class="text-lg text-center max-w-7xl">
+				This page is dedicated to keeping track of relevant events in the fediverse, be it advances in technology,
+				notable Instances being born or going down, or other happenings that are bound to catch the attention of many
+				people at least for a couple of hours!
+			</p>
+		</div>
+	</header>
+
+	<ul class="-mb-4">
+		{events.sort((ev1, ev2) => ev2.date.localeCompare(ev1.date)).map((event) => (
+			<ChronologyItem title={event.title} description={event.description} date={new Date(Date.parse(event.date))} type={event.type} />
+		))}
+	</ul>
+</Layout>

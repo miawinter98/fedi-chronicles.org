@@ -1,0 +1,28 @@
+---
+interface Props {
+	title: string;
+	content: string;
+	link?: string;
+	linkLabel?: string;
+	linkTarget?: string;
+}
+
+const { title, content, link, linkLabel = "Open", linkTarget = "_blank" } = Astro.props;
+---
+
+<section class="flex flex-col bg-primary-gradient box-shadow w-full rounded md:w-128 min-h-48">
+	<div class="flex-1 p-4">
+	   <h2 class="text-2xl mb-4">{title}</h2>
+       <slot />
+	</div>
+    <div class="bg-secondary-gradient rounded-b flex justify-end border-t border-neutral-900">
+    	<a class="bg-accent button-shadow p-1 m-2 w-32 text-center rounded rounded hover:brightness-75"
+    	   href={link} target={linkTarget}>
+    	   {linkLabel}
+		</a>
+    </div>
+</section>
+
+<style>
+	
+</style>

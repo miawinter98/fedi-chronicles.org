@@ -1,0 +1,37 @@
+---
+import '../styles/style.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Mia Rose Winter" />
+	    <meta name="description" content="" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<main class="bg-neutral-800 text-white px-4 md:px-12 py-4">
+			<slot />
+		</main>
+
+		<footer class="bg-primary-gradient text-white px-12 py-4">
+			<p class="text-center hover:text-neutral-700">
+				<a href="#">GitHub</a>
+			</p>
+		</footer>
+	</body>
+</html>
+<style is:global>
+	
+</style>
