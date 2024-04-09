@@ -36,8 +36,8 @@ const { title, type, description, date} = Astro.props;
         )}
     </div>
     <div class="flex-1 mt-4">
-        <h2 class="text-xl md:text-2xl mb-1">{title}</h2>
-        <p class="line-clamp-[7] hyphens-auto text-justify max-w-3xl" lang="en">
+        <h2 class="line-clamp-2 text-xl md:text-2xl mb-1" title={title}>{title}</h2>
+        <p class="line-clamp-[6] md:line-clamp-[7] hyphens-auto text-justify max-w-3xl" lang="en" title={description}>
             <strong class="md:hidden">{date.toLocaleDateString(undefined, {month: 'long', year: 'numeric'})} <br></strong>
             {description}
         </p>
