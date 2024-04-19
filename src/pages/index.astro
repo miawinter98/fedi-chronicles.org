@@ -8,15 +8,18 @@ const events = await Astro.glob("../events/*.json");
 ---
 
 <Layout title="Fedi Chronicles">
-	<header>
+	<header class="flex flex-col items-center mb-16 bg-secondary-dark py-4 px-4 md:px-0 -mt-4 -mx-4 md:-mx-12">
+		<picture>
+			<source type="image/svg+xml" srcset="favicon.svg" />
+			<img class="h-40 lg:h-56 px-12 py-4" src="logo-1000x1000.png"
+				 alt="Logo of fedi chronicles: a stylised disc or record in the colors of the page, with the right half of it covered by the fediverse logo, and the other half having 'chronicle' written along the curvature of it facing inwards." />
+		</picture>
 		<h1 class="text-3xl mb-12 text-center">Welcome to Fedi Chronicles!</h1>
-		<div class="flex justify-center mb-24">
-			<p class="text-lg text-center max-w-7xl">
-				This page is dedicated to keeping track of relevant events in the fediverse, be it advances in technology,
-				notable Instances being born or going down, or other happenings that are bound to catch the attention of many
-				people at least for a couple of hours!
-			</p>
-		</div>
+		<p class="text-lg text-justify md:text-center max-w-7xl mb-4">
+			This page is dedicated to keeping track of relevant events in the fediverse, be it advances in technology,
+			notable Instances being born or going down, or other happenings that are bound to catch the attention of many
+			people at least for a couple of hours!
+		</p>
 	</header>
 
 	<ul class="-mb-4">
