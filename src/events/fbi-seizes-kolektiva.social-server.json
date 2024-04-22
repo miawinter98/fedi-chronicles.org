@@ -1,0 +1,6 @@
+{
+  "type": "news",
+  "date": "2023-05-01",
+  "title": "FBI seizes kolektiva.social server",
+  "description": "During a raid on the home of the Admin of kolektiva.social, the server running the Instance is seized by the FBI. The data on it was not encrypted, so this event sparked a debate about data security on fediverse software."
+}
